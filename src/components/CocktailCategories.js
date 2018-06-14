@@ -5,9 +5,10 @@ import './CocktailCategories.css'
 export default class CocktailCategories extends PureComponent {
   // state = { cocktailCategories: null }
   renderCocktailCategory (cocktailCategory) {
+    const prettyCategory = cocktailCategory.replace(/ /g , "_").replace(/\//g, "%2F")
     return    (
-      <li key={cocktailCategory}>
-<Link to={ `/cocktailimages/${cocktailCategory}` }>{cocktailCategory}</Link>
+      <li key={prettyCategory}>
+<Link to={ `/cocktailimages/${prettyCategory}` }>{cocktailCategory}</Link>
 </li>
         )
   }

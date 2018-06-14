@@ -13,7 +13,7 @@ export default function CocktailImages (props) {
       { props.images && props.images.map((drink) =>
         <div>
         <div>
-          <h3>{drink.strDrink}</h3>
+            <Link to={ `/cocktaildetails/${drink.idDrink}` }>{drink.strDrink}</Link>
         </div>
         <div>
           <img className = "cocktail-thumb"  src={ drink.strDrinkThumb } alt="Cocktail" />

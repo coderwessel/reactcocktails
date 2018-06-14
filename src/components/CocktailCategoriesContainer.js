@@ -30,6 +30,7 @@ export default class CocktailCategoriesContainer extends PureComponent {
       cocktailCategories: cocktailCategories
     })
   }
+
   render() {
     return <CocktailCategories cocktailCategoriesList={this.state.cocktailCategories} />
   }
